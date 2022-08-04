@@ -32,6 +32,7 @@ class MyCircularQueue:
             return True
   
     def get_front(self) -> int:
+        return self.front
         """
         if (self.front == -1): 
             return -1
@@ -39,6 +40,7 @@ class MyCircularQueue:
             return self.queue[self.front]
         """
     def get_rear(self):
+        return self.rear
         """
         if (self.front == -1): 
             return -1
