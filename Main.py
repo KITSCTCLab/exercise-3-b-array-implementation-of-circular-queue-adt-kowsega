@@ -1,6 +1,5 @@
 class MyCircularQueue:
     def __init__(self, size: int):
-        # Write code here
         self.size = size
         self.queue = [None]*size
         self.rear = -1
@@ -18,8 +17,7 @@ class MyCircularQueue:
             self.rear = (self.rear + 1) % self.size
             self.queue[self.rear] = value
             return True
-
-    # Delete an element from the circular queue
+        
     def dequeue(self):
         if (self.front == -1):
             return False
@@ -27,14 +25,13 @@ class MyCircularQueue:
             temp = self.queue[self.front]
             self.front = -1
             self.rear = -1
-            return temp
+            return True
         else:
             temp = self.queue[self.front]
             self.front = (self.front + 1) % self.size
-            return temperory
+            return True
   
     def get_front(self) -> int:
-        # Write code here
         """
         if (self.front == -1): 
             return -1
@@ -42,7 +39,6 @@ class MyCircularQueue:
             return self.queue[self.front]
         """
     def get_rear(self):
-        # Write code here
         """
         if (self.front == -1): 
             return -1
@@ -50,14 +46,12 @@ class MyCircularQueue:
             #return self.queue[self.rear]
         """
     def is_empty(self):
-        # Write code here
         if self.front==-1:
             return True
         else:
             return False
         
     def is_full(self):
-        # Write code here
         if (self.rear==(self.size-1) and self.front==0) or (self.front==self.rear+1):
             return True
         else:
