@@ -54,8 +54,6 @@ class MyCircularQueue:
         if (self.rear==(self.size-1) and self.front==0) or (self.front==self.rear+1):
             return True
         else:
-            return False
-
 # Do not change the following code
 operations = []
 for specific_operation in input().split(','):
